@@ -14,7 +14,7 @@ int main() {
     // O(log n)
     idades["Joao"] = 13;
 
-    // .insert --> insere um pair, interpreatação por vetor
+    // .insert --> insere um pair, interpretação por vetor
     // O(log n)
     idades.insert({"Ana", 10});
     idades.insert({"Pedro", 5});
@@ -25,9 +25,13 @@ int main() {
     
     // podemos acessar um elemento utilizando apenas 'nome[chave]'
     cout << "Nome: Joao; Idade: " << idades["Joao"] << endl;
-    
+
+    // .begin() --> início do map
+    // .end() --> final do map
+    // .begin() e .end() funcionam como iterator e não ponteiros
+
     // .find(chave) --> retorna o valor da chave especificada, se a chave não for encontrada retornará o último valor
-    if (idades.find("Ana") == idades.end()) {cout << "'Ana' nao esta no mapa." << endl;}
+    if (idades.find("Ana") == idades.end()) {cout << "'Ana' nao esta no map." << endl;}
     else {cout << "Nome: Ana; Idade: " << idades["Ana"] << endl;}
     cout << endl;
 
@@ -37,7 +41,8 @@ int main() {
     idades["Thiago"] = 17;
     idades["Gabriel"] = 20;
     idades["Emilia"] = 31;
-    
+    idades["Ednaldo"] = 60;
+
     map <string, int> ::iterator it;
     for (it = idades.begin(); it != idades.end(); it++) {
         cout << "Nome: " << (*it).first << "; Idade: " << (*it).second << endl;

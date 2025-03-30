@@ -29,7 +29,7 @@ int modulo(int n) {
 // Função que retorna o n-ésimo termo da sequência de Fibonacci
 int fib(int n) {
     if (n < 0) {return 0;}
-    else if (n == 0 or n == 1) {return n;}  // temos fib(0) = 0 e fib(1) = 1
+    else if (n <= 1) {return n;}  // temos fib(0) = 0 e fib(1) = 1
     else {return fib(n-1) + fib(n-2);}  // com isso, a função procura por si mesma até encontrar um valor
 }
 
@@ -61,7 +61,7 @@ int addk(int *n, int k = 1) {
 }
 
 int main() {
-    // função maior,  função menor e função módulo
+    // função maior, função menor e função módulo
     cout << maior(4, 5) << " > " << menor(4, 5)  << "; " << "|-5| = " << modulo(-5) << endl;
     
     // fib(n)
@@ -76,7 +76,7 @@ int main() {
     cin >> a;
     cout << "Digite um valor para 'b': ";
     cin >> b;
-    cout << "mdc(" << a << ", " << b << ") = " << mdc(a, b) << endl;
+    cout << "mdc(a, b) = " << "mdc(" << a << ", " << b << ") = " << mdc(a, b) << endl;
 
     // addk(&num, k = 1)
     int x = 3, y = 1;

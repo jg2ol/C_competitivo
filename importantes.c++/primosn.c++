@@ -6,11 +6,8 @@ bool primosn(int n) {
     if (n < 0) {n *= -1;}
     if (n == 1 or n == 0) {return false;}
 
-    int qdiv = 1;
-    for (int i = 2; i <= sqrt(n); i++) {if (n%i == 0) {qdiv++;}}
-
-    if (qdiv == 1) {return true;}
-    return false;
+    for (int i = 2; i <= sqrt(n); i++) {if (n%i == 0) {return false;}}
+    return true;
 }
 
 int main() {

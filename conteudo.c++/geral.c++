@@ -50,7 +50,7 @@ int main() {
     cout << "10a + 2 = " << a*10+2 << endl;
     // vários cout's seguidos dá a ideia de concatenação de strings (+)
     cout << a << " " << "e o valor da variavel 'a'. \n" << endl;
-    // == print(a + " " + "eh o valor da variavel 'a'.", end = "\n") + print()
+    // == print(a + " " + "e o valor da variavel 'a'.", end = "\n") + print()
     // cout "\n" === cout << endl;
 
     // ex.'s:
@@ -89,7 +89,6 @@ int main() {
     // estrutura: int x; int* p = &x, int *p = &x ou int * p = &x;
     int x = 13;
     int *p = &x;  // a partir daqui, todo '*p' que aparecer significará 'x', ou seja, *p === x
-    
     // imprimindo a posição da variável x na memória (muda toda vez que rodamos o código)
     cout << "A variavel 'x' se encontra na posicao " << p << " na memoria do computador." << endl;
     cout << "x = " << *p << endl;   // imprime o valor de 'x'

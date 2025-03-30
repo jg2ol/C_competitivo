@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// set --> um vetor de elementos distintos (não permite repetição de elemento)
+// set --> um vetor de elementos distintos e ordenados (não permite repetição de elemento)
 
 int main() {
     // declaração, estrutura: set <tipo> nome;
@@ -15,14 +15,18 @@ int main() {
     t.insert(-2);
     t.insert(0);
     t.insert(-2); // não acontece nada aqui, pois, -2 já está em t
+    // t = {-2, 0, 1, 3, 9}
 
     // .erase(elemento) --> remove um elemento do set
     // O(log n)
     t.erase(9);
     t.erase(-1); // nada acontece, pois, -1 não pertence à t
 
-    // .begin() --> ponteiro para o priemiro elemento do set
+    // .begin() --> ponteiro para o primeiro elemento do set
+    cout << "O primeiro elemento do set 't' e " << *t.begin() << endl;
+    
     // .end() --> ponteiro para o último elemento do set
+    cout << "O ultimo elemento do set 't' e " << *(--t.end()) << endl;
     // ambos em O(1)
     // não faz sentido pensar em ordenar um set, pois, ele já é naturalmente ordenado
 
@@ -53,16 +57,17 @@ int main() {
     else {cout << "O set u nao esta vaizo." << endl;}
     cout << endl;
 
-    // .lower_bound(x) --> retorna um ponteiro para o primeiro elemento que não vem antes que x
+    // .lower_bound(x) --> retorna um ponteiro para o primeiro elemento que não vem antes que x (o próprio x)
     // .uper_bound(x) --> retorna um ponteiro para o primeiro elemento que vem depois de x
     // ambos em O(log n)
     set <int> v;
-    for (int x = 1; x < 10; x++) {v.insert(x);}
-    // int *p1 = v.lower_bound(3), *p2 = v.upper_bound(3);
+    for (int x = 1; x < 10; x++) {v.insert(x);} // v = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+    int lb = *--v.lower_bound(3), ub = *v.upper_bound(3);
+    cout << "O elemento que vem antes de 3 no set 'v' e " << lb << ", e o que vem depois e " << ub << endl;
 
     // .count(elemento) --> retorna 1 se o elemento está no set e 0 caso contrário
-    if (t.count(5) == 1) {cout << "5 pertence ao set t.  [t.count(5) = " << t.count(5) << "]" << endl;}
-    else {cout << "5 nao pertence ao set t.  [t.count(5) = " << t.count(5) << "]" << endl;}
+    if (v.count(5) == 1) {cout << "5 pertence ao set 'v'.  [v.count(5) = " << v.count(5) << "]" << endl;}
+    else {cout << "5 nao pertence ao set 'v'.  [v.count(5) = " << v.count(5) << "]" << endl;}
 
     // percorrendo um set...
     // um set é organizado de maneira bem mais complaxa do que vetores, além da necessidade de ponteiros,
@@ -71,7 +76,8 @@ int main() {
     // para percorrer por todos os valores de um set, precisamos de um 'iterator'
     
     // estrutura: set <tipo> ::iterator nome [do iterator];
-    // for (it = set.begin(); it != set.end(); it++) { bloco de código; ex.: cout << *it << " "; }
+    // for (nome = set.begin(); nome != set.end(); nome++) { bloco de código; ex.: cout << *it << " "; }
+    cout << endl;
     set <int> lista;
     for (int x = 0; x <= 10; x++) {lista.insert(x);}
     set <int> ::iterator it;

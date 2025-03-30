@@ -16,6 +16,9 @@ int main() {
     fila1.push(0);
     fila1.push(3);
     fila1.push(2);
+    
+    // .top() --> acessando topo
+    // O(log n)
     cout << "O topo de fila1 e " << fila1.top() << endl;
     // fila1 = {0, 1, 2, 3}
 
@@ -23,9 +26,6 @@ int main() {
     // O(log n)
     fila1.pop(); // elimina o 3
     fila1.pop(); // elimina o 2
-
-    // .top() --> acessando topo
-    // O(log n)
     cout << "Agora, o topo de fila1 e " << fila1.top() << endl;
     
     // .size() --> retorna a quantidade de elementos na fila de prioridade
