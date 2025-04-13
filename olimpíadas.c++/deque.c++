@@ -3,7 +3,6 @@ using namespace std;
 
 // Min queue / deque --> estrutura semelhante à queue, porém em ordem crescente
 // a estrutura guarda um par de valores: o valor do elemento e o tempo em que foi adicionado
-// 
 
 // int main() {
 //     // declaração, estrutura: deq <pair <tipo1, tipo2>> nome;

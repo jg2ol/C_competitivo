@@ -15,11 +15,12 @@ int main() {
     pilha.push(6);
     pilha.push(-5);
 
-    // .pop() --> remove o elemento do topo
-    pilha.pop(); // agora o elemento de topo de 'pilha' é 6
-
     // .top() --> acessa o elemento do topo
     cout << "O elemento do topo de 'pilha' e " << pilha.top() << endl;
+
+    // .pop() --> remove o elemento do topo
+    pilha.pop(); // agora o elemento de topo de 'pilha' é 6
+    cout << "Agora, o elemento do topo de 'pilha' e " << pilha.top() << endl;
 
     // .size() --> retorna o tamanho da pilha
     cout << "A pilha tem " << pilha.size() << " elementos." << endl;
