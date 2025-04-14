@@ -41,6 +41,10 @@ int main() {
     for (int x = 0; x < 4; x++) {vetor2.push_back(x);}
     vetor2.clear();
 
+    // .empty() --> booleano que verifica se o vetor está vazio ou não
+    if (!vetor2.empty()) {cout << "O vetor2 nao esta vazio." << endl;}
+    else {cout << "O vetor2 esta vazio." << endl;}
+
     // (int)vetor.size() === len(vetor) --> retorna a quantidade de elementos de um vetor
     // O(1)
     // vetor.size() retorna um tipo diferente de inteiro, portanto, para fazer
@@ -60,4 +64,19 @@ int main() {
     sort(vetor1.begin(), vetor1.end());
 
     for (int x = 0;  x < (int)vetor1.size(); x++) {cout << vetor1[x] << " ";}
+    cout << endl;
+
+    // remove(p_inicio, p_final, valor) --> elimina todos os elementos de valor específico
+    // não altera o tamanho do vetor,
+    // se foram retirados k elementos de uma vez só,
+    // ele completa o vetor com últimos k elementos do vetor original, mesmo que contenha o elemento retirado.
+    // assim, para casos específicos podemos utilizar v.resize(n - k).
+    // a exemplo:
+    vector <int> v = {1, 1, 1, 1, 2, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 5, 0, 6, 7, 8};
+    remove(v.begin(), v.end(), 0); // remove os zeros e completa o vetor com os elementos do original
+    for (int i : v) {cout << i << " ";} // outra forma de percorrer objetos da STL
+    cout << endl;
+    remove(v.begin(), v.end(), 1); // remove os 1's e completa o vetor com os 'k' últimos elementos remanescentes
+    for (int i:v) {cout << i << " ";}
+    cout << endl;
 }
