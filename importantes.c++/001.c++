@@ -1,24 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// link: https://neps.academy/br/exercise/254
+// Sorveteiros
+// resposta errada (??)
+
 int main() {
-    // código utilizando variáveis do tipo bool
-    // link: https://neps.academy/br/exercise/52
-    int n;
-    bool a = false, b =  false;
-    cin >> n;
+    int p, s;
+    cin >> p >> s;
+    
+    vector <pair <int, int>> sorveteiros;
+    for (int x = 0; x < s; x++) {
+        int u, v;
+        cin >> u >> v;
+        
+        if (!sorveteiros.empty()) {
+            int ultimo = sorveteiros.back().second;
+            if (ultimo < u) {sorveteiros.push_back({u, v});}
+            else if (ultimo < v) {sorveteiros.back().second = v;}
+        } else {sorveteiros.push_back({u, v});}
+    }
 
-    for (int x = 0; x < n; x++) {
-        int i;
-        cin >> i;
-        if (i == 1) {
-            a = !a;
-        } else {
-            a = !a;  // --> uso do not
-            b = !b;
-        };
-    };
-
-    if (a) {cout << 1 << "\n";} else {cout << 0 << "\n";}
-    if (b) {cout << 1 << "\n";} else {cout << 0 << "\n";}
+    for (pair <int, int> p : sorveteiros) {cout << p.first << " " << p.second << endl;}
 }

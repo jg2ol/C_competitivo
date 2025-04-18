@@ -1,0 +1,10 @@
+Links:
+
+Expressões: https://neps.academy/br/exercise/271 (Stack de char's)
+Machine Learning: https://neps.academy/br/exercise/2835 (Strings...)
+Toupeira: https://neps.academy/br/exercise/2323 (Matriz de adjacência) [OBI]
+Times: https://neps.academy/br/exercise/253 (Organização ordenada de um vetor de pair's)
+Produto médio: https://neps.academy/br/exercise/676 (Análise numérica)
+Copa do mundo: https://neps.academy/br/exercise/276 (Queue de char e solução ideal) [OBI]
+Zero para cancelar: https://neps.academy/br/exercise/1486 (Várias soluções)
+Gincana: https://neps.academy/br/exercise/309 (Exemplo de Union-Find) [OBI]
