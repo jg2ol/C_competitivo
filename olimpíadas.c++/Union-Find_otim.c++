@@ -8,10 +8,13 @@ using namespace std;
 
 #define maxn 100100
 
-int pai[maxn]; // pai[i] = pai de i
-int peso[maxn]; // peso[i] = distância do descendente de i mais longe do patriarca de i
+int pai[maxn]; // vetor que guarda o patriarca de x
+int peso[maxn]; // vetor que guarda a distância do descendente de x mais longe de x
 // também podemos saber quantos elementos tem o conjunto com o elemento x em O(1)
-int qtd[maxn]; // qtd[i] = quantos elementos têm o mesmo patriarca que i (inclusive ele mesmo)
+int qtd[maxn]; // vetor que guarda quantos elementos tem a família de x (inclusive ele mesmo)
+
+// podemos saber a quantidade de famílias também em O(1)
+int qtd_pat;
 
 // Função otimizada com vetor que retorna o pai de x
 int find(int x) {
@@ -36,18 +39,23 @@ void join(int x, int y) {
     // assim, reduzindo o caminho de find(x)
     x = find(x);
     y = find(y);
-    if (peso[x] < peso[y]) {pai[x] = y; qtd[y] += qtd[x];}
-    else if (peso[x] > peso[y]) {pai[y] = x; qtd[x] += qtd[y];}
-    else {pai[x] = y; peso[y]++; qtd[y] += qtd[x];}
-    // atualizo a quantidade de elementos dos conjuntos no vetor qtd
+    if (x != y) {
+        if (peso[x] < peso[y]) {pai[x] = y; qtd[y] += qtd[x];}
+        else if (peso[x] > peso[y]) {pai[y] = x; qtd[x] += qtd[y];}
+        else {pai[x] = y; peso[y]++; qtd[y] += qtd[x];}}
+        // atualizo a quantidade de elementos dos conjuntos no vetor qtd
+        qtd_pat--; // atualizo a quantidade de famílias (alguém deixou de ser patriarca)
 }
 
 int main() {
     int n, k;
     cin >> n >> k;
 
-    for (int x = 1; x <= n; x++) {pai[x] = x; qtd[x] = 1;}
     // inicialmente, todo elemento é pai somente de si mesmo, portanto, qtd[i] = 1;
+    for (int x = 1; x <= n; x++) {pai[x] = x; qtd[x] = 1;}
+
+    // inicialmente, há 'n' famílias
+    qtd_pat += n;
 
     char c;
     int b1, b2;

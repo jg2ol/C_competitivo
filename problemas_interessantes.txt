@@ -9,4 +9,4 @@ Copa do mundo: https://neps.academy/br/exercise/276 (Queue de char e solução i
 Zero para cancelar: https://neps.academy/br/exercise/1486 (Várias soluções)
 Gincana: https://neps.academy/br/exercise/309 (Exemplo de Union-Find) [OBI]
 Chaves: https://neps.academy/br/exercise/56 (Exemplo de getline() e cin.ignore()) [OBI]
-Fusões: https://neps.academy/br/exercise/264 (Exemplo de Union-Find) [OBI]
+Gincana: https://neps.academy/br/exercise/309 (Exemplo de Union-Find) [OBI]
