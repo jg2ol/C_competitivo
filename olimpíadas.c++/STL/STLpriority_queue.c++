@@ -4,6 +4,7 @@ using namespace std;
 // priority_queue --> fila de prioridade, é uma fila (queue) com ordem crescente
 // ou seja, no topo fica o maior elemento da priority_queue
 // possui diversas semelhanças com a queue
+// todas as operações possuem complexidade O(log n)
 
 int main() {
     // declaração de uma priority
@@ -19,18 +20,18 @@ int main() {
     
     // .top() --> acessando o final da "fila"
     // O(log n)
-    cout << "O topo de fila1 e " << fila1.top() << endl;
+    cout << "O topo de 'fila1' e " << fila1.top() << endl;
     // fila1 = {0, 1, 2, 3}
 
     // .pop() --> deletando elementos
     // O(log n)
     fila1.pop(); // elimina o 3
     fila1.pop(); // elimina o 2
-    cout << "Agora, o final de fila1 e " << fila1.top() << endl;
+    cout << "Agora, o final de 'fila1' e " << fila1.top() << endl;
     
     // .size() --> retorna a quantidade de elementos na fila de prioridade
     // O(log n)
-    cout << "A fila1 tem " << fila1.size() << " elementos."<< endl << endl;
+    cout << "A 'fila1' tem " << fila1.size() << " elementos."<< endl << endl;
 
     // podemos modificar uma priority_queue fazendo ela se organizar em ordem decrescente
     // ou seja, o elemento do topo sendo o de menor valor
@@ -41,9 +42,9 @@ int main() {
     fila2.push(1);
     fila2.push(5);
     fila2.push(4);
-    cout << "O elemento do topo de fila2 e " << fila2.top() << endl;
+    cout << "O elemento do topo de 'fila2' e " << fila2.top() << endl;
     fila2.pop();
     fila2.pop();
-    cout << "Agora, o elemento do topo de fila2 e " << fila2.top() << endl;
-    cout << "A fila2 tem " << fila2.size() << " elementos.";
+    cout << "Agora, o elemento do topo de 'fila2' e " << fila2.top() << endl;
+    cout << "A 'fila2' tem " << fila2.size() << " elementos.";
 }

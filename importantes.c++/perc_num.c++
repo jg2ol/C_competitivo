@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
 int main() {
     // Produto triplo, médio
     // link: https://neps.academy/br/exercise/676
