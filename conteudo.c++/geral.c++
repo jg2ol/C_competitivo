@@ -12,14 +12,33 @@
 // dizendo que não iremos usar a nomenclatura padrão (precisaria digitar 'std' toda vez que fosse usar algo)
 using namespace std;
 
-// podemos definir nomes p/ valores constantes (geralmente máximos e mínimos p/ casos de teste)
+// podemos definir nomes p/ expressões "constantes" (geralmente máximos e mínimos p/ casos de teste)
 // não precisa de ";"
-// ex.:
+// ex.'s:
+
+// valor numérico constante
 #define maxn 100100
-// também podemos definir nomes p/ tipos de variáveis
-// estrutura: typedef tipo nome;  --> precisa do ";"
-// ex.:
-typedef long long int lli; // defino a chamada do tipo long long int como lli
+
+// chamada de funções importadas
+#define F first // pair.first == pair.F
+#define S second // pair.second == pair.S
+#define PB push_back // vector
+
+// chamada de quaisquer estruturas "naturais" da linguagem
+#define REP(i, a, b) for (int i = a; i <= b; i++)
+// for (int x = 0; x < n; x++) {} == REP(x, 0, n-1) {}
+
+// tomar cuidado com expressões, ex.:
+// #define SQ(a) a*a
+// SQ(1+2) = 1+2*1+2 = 5, e não (1+2)*(1+2) = 9
+#define SQ(a) (a)*(a) // sempre colocar parênteses em valores
+
+// não serve para tipagem de variáveis nem para as estruturas importadas em si, para isso, utilizamos outra estrutura
+// estrutura: typedef tipo nome_atualizado;
+typedef long long int lli;
+typedef vector <int> vi;
+typedef pair <int, int> pii;
+
 
 // Função que recebe um ponteiro de um inteiro e faz com que o inteiro receba +3
 void add3(int* p) {
@@ -27,17 +46,17 @@ void add3(int* p) {
 }
 
 int main() {
-    // o código inteiro entra aqui
+    // a maior parte do código entra aqui
     // ao final de toda santa linha, precisa de um ";"
     // o c++ não tem problema com identação, mas serve p/ organização
     // o c++ não aceita acentuação e ç
     
     // semelhanças com Python, todas as linguagens de progrmação são parecidas
     
-    // cout == print()
+    // cout == print(, end = "")
     // Mostre <-- variável; "mostre a variável"
     // caso for usado mais de um cout os print's seram concatenados, ou seja, p/ haver quebra de linha, precisamos
-    // dizer ao programa, utilizando o endl ou o '\n' dentro de aspas
+    // dizer ao programa, utilizando o endl ou o '\n' (mais rápido) dentro de aspas
     cout << "chama" << endl;
 
     // declaração de variáveis, a tipagem mais usada é int
@@ -47,7 +66,7 @@ int main() {
     // p/ atualizar valores de variáveis, basta utilizar 'nome = valor_novo'
     int a = 10;
     a = 13;
-    cout << "10a + 2 = " << a*10+2 << endl;
+    cout << "10a + 2 = " << a*10+2 << endl; // 132
     // vários cout's seguidos dá a ideia de concatenação de strings (+)
     cout << a << " " << "e o valor da variavel 'a'. \n" << endl;
     // == print(a + " " + "e o valor da variavel 'a'.", end = "\n") + print()
@@ -95,7 +114,7 @@ int main() {
 
     // com isso, podemos declarar funções capazes de modificar os valores originais das variáveis!
     // ex.: fazendo x += 3 utilizando a função add3();
-    add3(p);   // podemos fazer de forma mais direta: int x = 13; add3(&x); --> x = 16
+    add3(p); // podemos fazer de forma mais direta: int x = 13; add3(&x); --> x = 16
     cout << "Agora, x = " << x << endl;
 
     // na declaração de vetores, seus elementos são armazenados um após o outro ('lado a lado')
@@ -158,14 +177,4 @@ int main() {
     
     printf("%03d; 3 casas para a direita, completando com zeros\n", num);
     // imprime o valor de x com 3 espaços próprios à esquerda, completando com zeros
-
-    // Precisão de casas decimais
-    // estrutura: printf("%.nf", variável); --> 'n' é o número de casas decimais que desejamos
-    // por padrão, C e C++ permitem manipulações até a 6ª casa decimal
-    float f = 1.123456789;
-    printf("%.1f; %.2f; %.7f; %.10f;\n\n", f, f, f, f);
-
-    // também podemos mudar a base de um número na hora de imprimí-lo
-    // estrutura: printf("%[base]", variável);
-    // a 'base' pode ser: o -> octadecimal (8); x -> hexadecimal (16);
 }

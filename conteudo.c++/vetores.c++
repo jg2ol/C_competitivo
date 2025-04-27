@@ -8,10 +8,16 @@ int empr[maxn], capital[maxn];
 
 // funções utilizadas...
 
-// Função que compara dois inteiros a partir dos capitais nos respectivos índices
+// Booleano resultante a partir da comparação de dois inteiros a partir dos capitais nos respectivos índices
 bool comparaCap(int x, int y) {
     if (capital[x] >= capital[y]) {return true;}
     return false;
+}
+
+// Booleano da comparação de duas strings considerando a quantidade de caracteres de cada uma
+bool comparaString(string a, string b) {
+    if (a.size() != b.size()) {return a.size() < b.size();}
+    else {return a < b;}
 }
 
 int main() {
@@ -62,4 +68,10 @@ int main() {
     cout << "A ordem dos numeradores das empresas de acordo com os capitais fica: ";
     for (int x = 0; x < n; x++) {cout << empr[x]+1 << " ";}
     cout << endl << endl;
+
+    // outro exemplo: podemos ordenar um vetor de strings considerando também o tamanho de cada string
+    string v[5] = {"joao", "maria", "jose", "xyz", "ana"};
+    sort(v, v+5, comparaString);
+    for (string s : v) {cout << s << " ";}
+    cout << "\n";
 }

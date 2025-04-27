@@ -61,7 +61,9 @@ int main() {
 
     // organizando um vector com sort()
     // O(nlog n)
-    sort(vetor1.begin(), vetor1.end());
+    // tambem podemos organizar em ordem decrescente
+    // .rbegin() e .rend() --> ponteiro do início e final do vetor indicando que desejamos uma ordenação inversa
+    sort(vetor1.rbegin(), vetor1.rend());
 
     for (int x = 0;  x < (int)vetor1.size(); x++) {cout << vetor1[x] << " ";}
     cout << endl;
@@ -77,6 +79,6 @@ int main() {
     for (int i : v) {cout << i << " ";} // outra forma de percorrer objetos da STL
     cout << endl;
     remove(v.begin(), v.end(), 1); // remove os 1's e completa o vetor com os 'k' últimos elementos remanescentes
-    for (int i:v) {cout << i << " ";}
+    for (int i : v) {cout << i << " ";}
     cout << endl;
 }
