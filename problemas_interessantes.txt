@@ -10,3 +10,4 @@ Zero para cancelar: https://neps.academy/br/exercise/1486 (Várias soluções)
 Gincana: https://neps.academy/br/exercise/309 (Exemplo de Union-Find) [OBI]
 Chaves: https://neps.academy/br/exercise/56 (Exemplo de getline() e cin.ignore()) [OBI]
 Gincana: https://neps.academy/br/exercise/309 (Exemplo de Union-Find) [OBI]
+O Mar não está para Peixe: https://neps.academy/br/exercise/530 (Solução ideal com matrizes) [OBI]
