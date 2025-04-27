@@ -177,4 +177,10 @@ int main() {
     
     printf("%03d; 3 casas para a direita, completando com zeros\n", num);
     // imprime o valor de x com 3 espaços próprios à esquerda, completando com zeros
+
+    // swap() --> troca os valores de duas variáveis
+    int a = 1, b = 3;
+    cout << "Antes a = " << a << "; b = " << b << "\n";
+    swap(a, b); // a partir daqui, a = 3 e b = 1
+    cout << "Depois, a = " << a << "; b = " << b << "\n";
 }
