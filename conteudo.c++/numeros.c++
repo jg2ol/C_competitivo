@@ -32,6 +32,16 @@ int main() {
     cout << "a / b = " << a/b << "     (valor inteiro)" << endl;
     cout << "a / c = " << a/c << "   (valor real)" << endl;
     cout << "a / d = " << a/d << "    (valor inteiro negativo)" << endl << "\n";
+
+    // funções prontas p/ cálculos matemáticos
+    // abs(x) --> módulo de x
+    // pow(x, n) --> retorna x^n
+    // sqrt(x) --> x^(1/2)
+    // floor(x) --> parte inteira de x (piso de x)
+    // ceil(x) --> função teto de x
+    cout << "2^7 = " << pow(2, 7) << "\n";
+    cout << "2^(1/2) = " << sqrt(2) << "\n";
+    cout << "\n";
     
     // a função abs(n) retorna o valor absoluto de n
     // na declaração de inteiros, os números têm limites, assim, podemos definir com um outro tipo de variável:

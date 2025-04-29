@@ -37,7 +37,12 @@ int main() {
     }
     cout << "Voce digitou os valores: ";
     for (int x = 0; x < n; x++) {cout << vetor1[x] << " ";}
-    cout << endl << endl;
+    cout << "\n";
+    
+    cout << "Em ordem inversa: ";
+    reverse(vetor1, vetor1+n); // swap em valores opostos
+    for (int x = 0; x < n; x++) {cout << vetor1[x] << " ";}
+    cout << "\n\n";
 
     // ordenando um vetor de n elementos com a biblioteca algorithm (complexidade: O(n*log(n) --> log na base 2))
     // a função sort() recebe dois valores, o início e o fim declarando um intervalo p/ ser ordenado no vetor
