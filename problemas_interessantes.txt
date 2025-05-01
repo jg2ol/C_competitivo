@@ -12,3 +12,4 @@ Chaves: https://neps.academy/br/exercise/56 (Exemplo de getline() e cin.ignore()
 Gincana: https://neps.academy/br/exercise/309 (Exemplo de Union-Find) [OBI]
 O Mar não está para Peixe: https://neps.academy/br/exercise/530 (Solução ideal com matrizes) [OBI]
 Torre: https://neps.academy/br/exercise/45 (Solução trabalhosa p/ um problema trabalhoso) [OBI]
+Colorindo: https://neps.academy/br/exercise/535 (Exemplo de DFS) [OBI]
