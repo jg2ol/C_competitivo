@@ -81,4 +81,9 @@ int main() {
     remove(v.begin(), v.end(), 1); // remove os 1's e completa o vetor com os 'k' últimos elementos remanescentes
     for (int i : v) {cout << i << " ";}
     cout << endl;
+
+    // .lower_bound(x) --> menor elemento maior ou igual a x
+    // .upper_bound(x) --> menor elemento maior que x
+    // ambas retornam -1 quando não existir tal valor
+    // ambas p/ vetores ordenados
 }

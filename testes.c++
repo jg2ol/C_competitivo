@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// TLE
 #define maxn 1005
 int n, d, comp[maxn], qtd_comp;
 vector <pair <int, int>> arvores;
@@ -39,34 +40,5 @@ int main() {
 
     if (qtd_comp == 1) {cout << "S\n";}
     else {cout << "N\n";}
-    cout << qtd_comp;
-}
-
-#include <bits/stdc++.h>
-using namespace std;
-
-int componente[100100], qtd_comp;
-vector <int> vizinhos[100100];
-
-void dfs(int x) {
-    for (int i = 0; i < (int)vizinhos[x].size(); i++) {
-        int v = vizinhos[x][i];
-        if (componente[v] == -1) {componente[v] = qtd_comp; dfs(v);}
-    }
-}
-
-int main() {
-    int n, m;
-    cin >> n >> m;
-    for (int x = 1; x <= n; x++) {componente[x] = -1;}
-    for (int x = 0; x < m; x++) {
-        int i, j;
-        cin >> i >> j;
-        vizinhos[i].push_back(j);
-        vizinhos[j].push_back(i);
-    }
-    for (int x = 1; x <= n; x++) {
-        if (componente[x] == -1) {qtd_comp++; componente[x] = qtd_comp; dfs(x);}
-    }
     cout << qtd_comp;
 }
