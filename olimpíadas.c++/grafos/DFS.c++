@@ -6,11 +6,11 @@ using namespace std;
 // pode ser resolvido por Union-Find contando-se o número de patriarcas
 // porém, apresenta-se outra estratégia: DFS
 // vamos contar quantas componentes conexas o grafo resultante do problema possui
-// Cuidado com o valor de MAXN
 
-// #define MAXN 50050
-int componente[50050];
-vector <int> vizinhos[50050];
+// Cuidado com o valor de maxn
+#define maxn 50050
+int componente[maxn];
+vector <int> vizinhos[maxn]; // vector de vetores-padrão com maxn posições em cada um
 
 // Funcão recursiva que faz os vértices vizinhos (direta e indiretamente) de x serem uma componente só
 void dfs(int x) {
@@ -33,6 +33,7 @@ int main() {
     }
     int qtd_comp = 0;
     for (int x = 1; x <= n; x++) {
+        // faço a DFS em todos os vértices do grafo
         if (componente[x] == -1) {qtd_comp++; componente[x] = qtd_comp; dfs(x);}
     }
     cout << qtd_comp;

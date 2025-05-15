@@ -2,14 +2,14 @@ Links:
 
 Expressões: https://neps.academy/br/exercise/271 (Stack de char's)
 Machine Learning: https://neps.academy/br/exercise/2835 (Strings...)
-Toupeira: https://neps.academy/br/exercise/2323 (Matriz de adjacência) [OBI]
+Toupeira: https://neps.academy/br/exercise/2323 (Matriz de adjacência) [OBOI]
 Times: https://neps.academy/br/exercise/253 (Organização ordenada de um vetor de pair's)
 Produto médio: https://neps.academy/br/exercise/676 (Análise numérica)
-Copa do mundo: https://neps.academy/br/exercise/276 (Queue de char e solução ideal) [OBI]
+Copa do mundo: https://neps.academy/br/exercise/276 (Queue de char e solução ideal) [OBI - 2010]
 Zero para cancelar: https://neps.academy/br/exercise/1486 (Várias soluções)
-Gincana: https://neps.academy/br/exercise/309 (Exemplo de Union-Find) [OBI]
-Chaves: https://neps.academy/br/exercise/56 (Exemplo de getline() e cin.ignore()) [OBI]
-Gincana: https://neps.academy/br/exercise/309 (Exemplo de Union-Find) [OBI]
-O Mar não está para Peixe: https://neps.academy/br/exercise/530 (Solução ideal com matrizes) [OBI]
-Torre: https://neps.academy/br/exercise/45 (Solução trabalhosa p/ um problema trabalhoso) [OBI]
-Colorindo: https://neps.academy/br/exercise/535 (Exemplo de DFS) [OBI]
+Gincana: https://neps.academy/br/exercise/309 (Exemplo de Union-Find) [OBI - 2011]
+Chaves: https://neps.academy/br/exercise/56 (Exemplo de getline() e cin.ignore()) [OBI - 2016]
+O Mar não está para Peixe: https://neps.academy/br/exercise/530 (Solução ideal com matrizes) [OBI - 2011]
+Torre: https://neps.academy/br/exercise/45 (Solução trabalhosa p/ um problema trabalhoso) [OBI - 2015]
+Colorindo: https://neps.academy/br/exercise/535 (Exemplo de DFS) [OBI - 2011]
+Pão a Metro: https://neps.academy/br/exercise/605 (Exemplo simples de busca binária) [OBI - 2007]

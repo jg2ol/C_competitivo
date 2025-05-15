@@ -82,8 +82,11 @@ int main() {
     for (int i : v) {cout << i << " ";}
     cout << endl;
 
-    // .lower_bound(x) --> menor elemento maior ou igual a x
-    // .upper_bound(x) --> menor elemento maior que x
+    // lower_bound(v.begin(), v.end(), x) --> menor elemento maior ou igual a x
+    // upper_bound(v.begin(), v.end(), x) --> menor elemento maior que x
+    // O(log n)
     // ambas retornam -1 quando não existir tal valor
     // ambas p/ vetores ordenados
+    // lower(x) - v.begin() --> posição de tal elemento (0-indexado)
+    // *lower(x) --> valor numérico de tal elemento
 }
