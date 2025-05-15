@@ -5,11 +5,11 @@
 
 
 // importando uma biblioteca em c++
-// estrutura: #include <'nome'>  --> não precisa de ";"
+// estrutura: #include <nome>  --> não precisa de ";"
 // a biblioteca bits/stdc++.h contém todas as outras bibliotecas dentro dela
 // portanto, ao importá-la, teremos acesso a todo o conteúdo já criado em c++
 #include <bits/stdc++.h>
-// dizendo que não iremos usar a nomenclatura padrão (precisaria digitar 'std' toda vez que fosse usar algo)
+// dizendo que não iremos usar a nomenclatura padrão (precisaria digitar 'std::' toda vez que fosse usar algo)
 using namespace std;
 
 // podemos definir nomes p/ expressões "constantes" (geralmente máximos e mínimos p/ casos de teste)
@@ -22,7 +22,7 @@ using namespace std;
 // chamada de funções importadas
 #define F first // pair.first == pair.F
 #define S second // pair.second == pair.S
-#define PB push_back // vector
+#define PB push_back // vector.push_back(x) == vector.PB(x)
 
 // chamada de quaisquer estruturas "naturais" da linguagem
 #define REP(i, a, b) for (int i = a; i <= b; i++)
@@ -83,6 +83,15 @@ int main() {
     else {cout << "Ja morri..." << endl;}
     cout << "Minha letra favorita e '" << letra_favorita << "'." << endl;
     cout << "Neste momento, estou com " << dolar << " dolares!" << endl << endl;
+
+    // temos alguns tipos mais complexos de variáveis: void, const, auto, static, extern, register, ...
+    // um tipo interrante é o auto, com ele a variável sabe automaticamente que tipo ser
+    // ex.:
+    vector <int> v = {1, 2, 4, 5, 7, 10, -4};
+    for (auto x : v) {
+        // automaticamente x é do tipo int
+        cout << x << " ";
+    } cout << "\n\n";
 
     // cin == input(), porém, mais poderoso
     // Leia --> variável, "leia a variável"

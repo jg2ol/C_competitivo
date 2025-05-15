@@ -36,4 +36,9 @@ int main() {
     cin.ignore(); // não considere o "\n" deixado pelo último cout
     getline(cin, s); // leia uma linha e jogue na variável s
     cout << s << "\n";
+
+    // .substr(pos, qtd) --> retorna uma substring com qtd caracteres a partir da posição pos
+    string a = "Bom dia, " + nome;
+    string c = a.substr(2, 5); // c = "m dia";
+    cout << c << "\n";
 }

@@ -75,7 +75,7 @@ int main() {
     // https://pt.wikipedia.org/wiki/%C3%81rvore_rubro-negra --> sobre a organização de um set
     // para percorrer por todos os valores de um set, precisamos de um 'iterator'
     
-    // estrutura: set <tipo> ::iterator nome [do iterator];
+    // estrutura: set <tipo> ::iterator nome_do_iterator;
     // for (nome = set.begin(); nome != set.end(); nome++) { bloco de código; ex.: cout << *it << " "; }
     cout << endl;
     set <int> lista;
@@ -85,4 +85,7 @@ int main() {
     for (it = lista.begin(); it != lista.end(); it++) {cout << *it << " ";}
     // imprime todos os valores do set 'lista' (sempre ordenado)
     // note que não podemos fazer it += k (para k E Z), mas podemos fazer it++;
+
+    // as funções lower, upper e equal_range ficam mais simples usando set
+    // .lower_bound(x) --> retorna um ponteiro p/ o primeiro menor elemento maior ou igual que x
 }

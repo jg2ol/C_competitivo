@@ -33,6 +33,12 @@ int main() {
     // .find(chave) --> retorna o valor da chave especificada, se a chave não for encontrada retornará o último valor
     if (idades.find("Ana") == idades.end()) {cout << "'Ana' nao esta no map." << endl;}
     else {cout << "Nome: Ana; Idade: " << idades["Ana"] << endl;}
+    
+    // também podemos "contar" quantas vezes um valor aparece num map
+    // .count() --> retorna 1 se o valor tiver presente, 0 caso contrário
+    // se tentarmos acessar um elemento inexistente no map, será criado automaticamente com valor 0
+    if (idades.count("Ana")) {cout << "S\n";}
+    else {cout << "N\n";}
     cout << endl;
 
     // percorrendo um mapa
@@ -44,6 +50,9 @@ int main() {
     idades["Ednaldo"] = 60;
 
     map <string, int> ::iterator it;
+    // podemos reduzir o código do iterator, fazendo simplesmente:
+    // for (auto it = idades.begin(); it != idades.end(); it++) {}
+
     for (it = idades.begin(); it != idades.end(); it++) {
         cout << "Nome: " << (*it).first << "; Idade: " << (*it).second << endl;
     }
