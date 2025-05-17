@@ -11,6 +11,7 @@ int main() {
     for (int x = 0; x < n; x++) {int v; cin >> v; a.insert(v);}
     for (int x = 0; x < n; x++) {int v; cin >> v; b.insert(v);}
 
+    // Contando a quantidade de elementos pertencentes aos set's a e b
     int cont = 0;
     for (auto x : a) {if (b.count(x)) {cont++;}}
     cout << cont << "\n";
