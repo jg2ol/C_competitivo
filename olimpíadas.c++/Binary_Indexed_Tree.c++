@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// BIT - Binary Indexed Tree
+// BIT - Binary Indexed Tree (ou Fenwick Tree)
 // código base p/ problemas que pedem a soma dos termos de posições 1 até x de forma dinâmica
 // p/ melhor visualização: https://www.youtube.com/watch?v=uSFzHCZ4E-8
 
@@ -14,8 +14,7 @@ struct BIT {
     int tree[maxn];
     
     void update(int x, int val) {
-        // exatamente assim, se tentarmos fazer int k = x; --> erro
-        for (; x <= n; x += (x & -x)) {
+        for (int i = x; i <= n; i += (i & -i)) {
             tree[x] += val;
         }
     }
@@ -23,7 +22,7 @@ struct BIT {
     // soma de de [1, x]
     int soma(int x) {
         int ans = 0;
-        for (; x > 0; x -= (x & -x)) {
+        for (int i = x; i > 0; i -= (i & -i)) {
             ans += tree[x];
         }
         return ans;

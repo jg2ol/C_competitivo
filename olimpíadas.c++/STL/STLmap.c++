@@ -16,12 +16,12 @@ int main() {
 
     // .insert --> insere um pair, interpretação por vetor
     // O(log n)
-    idades.insert({"Ana", 10});
+    idades.insert({"ana", 10});
     idades.insert({"Pedro", 5});
 
     // .erase(chave) --> remove um elemento, dada sua chave
     // O(log n)
-    idades.erase("Ana");
+    idades.erase("ana");
     
     // podemos acessar um elemento utilizando apenas 'nome[chave]'
     cout << "Nome: Joao; Idade: " << idades["Joao"] << endl;
@@ -31,13 +31,13 @@ int main() {
     // .begin() e .end() funcionam como iterator e não ponteiros
 
     // .find(chave) --> retorna o valor da chave especificada, se a chave não for encontrada retornará o último valor
-    if (idades.find("Ana") == idades.end()) {cout << "'Ana' nao esta no map." << endl;}
-    else {cout << "Nome: Ana; Idade: " << idades["Ana"] << endl;}
+    if (idades.find("ana") == idades.end()) {cout << "'ana' nao esta no map." << endl;}
+    else {cout << "Nome: ana; Idade: " << idades["ana"] << endl;}
     
     // também podemos "contar" quantas vezes um valor aparece num map
     // .count() --> retorna 1 se o valor tiver presente, 0 caso contrário
     // se tentarmos acessar um elemento inexistente no map, será criado automaticamente com valor 0
-    if (idades.count("Ana")) {cout << "S\n";}
+    if (idades.count("ana")) {cout << "S\n";}
     else {cout << "N\n";}
     cout << endl;
 
