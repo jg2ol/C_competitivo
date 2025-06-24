@@ -16,3 +16,4 @@ Colorindo: https://neps.academy/br/exercise/535 (Exemplo de DFS) [OBI - 2011]
 Pão a Metro: https://neps.academy/br/exercise/605 (Exemplo simples de busca binária) [OBI - 2007]
 Sr. Sapo: https://neps.academy/br/exercise/1775 (Exemplo de DFS em Grid + Caminho em grafo)
 Arco e Flecha: https://neps.academy/br/exercise/6 (Exemplo de Contagem de Inversões) [OBI - 2016]
+Creating Strings II: https://cses.fi/problemset/task/1715/ (Exemplo de binomiais em módulo p + um pouco de char's)
