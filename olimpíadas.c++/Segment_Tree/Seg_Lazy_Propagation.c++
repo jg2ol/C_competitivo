@@ -16,6 +16,8 @@ void build(int node, int l, int r) {
     int m = (l+r)/2;
     build(2*node, l, m);
     build(2*node+1, m+1, r);
+    // parte em q é definida o tipo da Seg
+    // neste caso, a Seg representará os valores máximos dos intervalos
     tree[node] = max(tree[2*node], tree[2*node+1]);
 }
 
@@ -36,7 +38,7 @@ void unlazy(int node, int dl, int dr) {
 
 void updt(int node, int dl, int dr, int l, int r, int v) {
     unlazy(node, dl, dr);
-    if (dl >= r or dr <= l) {return;}
+    if (dl > r or dr < l) {return;}
     else if (dl >= l and dr <= r) {
         lz[node] = v;
         unlazy(node, dl, dr);
@@ -56,7 +58,7 @@ int query(int node, int dl, int dr, int l, int r) {
     else if (dl >= l and dr <= r) {return tree[node];}
     else {
         int m = (dl+dr)/2;
-        return max(query(2*node, dl, m, l, r), query(2*node+2, m+1, dr, l, r));
+        return max(query(2*node, dl, m, l, r), query(2*node+1, m+1, dr, l, r));
     }
 }
 
