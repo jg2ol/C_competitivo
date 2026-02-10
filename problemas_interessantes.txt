@@ -4,7 +4,7 @@ Links:
 Expressões: https://neps.academy/br/exercise/271 (Stack de char's)
 Machine Learning: https://neps.academy/br/exercise/2835 (Strings...)
 Toupeira: https://neps.academy/br/exercise/2323 (Matriz de adjacência) [OBOI]
-Times: https://neps.academy/br/exercise/253 (Organização ordenada de um vetor de pair's)
+Times: https://neps.academy/br/exercise/253 (Organização ordenada de um vetor de pares)
 Produto médio: https://neps.academy/br/exercise/676 (Análise numérica)
 Copa do mundo: https://neps.academy/br/exercise/276 (Queue de char e solução ideal) [OBI - 2010]
 Zero para cancelar: https://neps.academy/br/exercise/1486 (Várias soluções)
@@ -17,3 +17,5 @@ Pão a Metro: https://neps.academy/br/exercise/605 (Exemplo simples de busca bin
 Sr. Sapo: https://neps.academy/br/exercise/1775 (Exemplo de DFS em Grid + Caminho em grafo)
 Arco e Flecha: https://neps.academy/br/exercise/6 (Exemplo de Contagem de Inversões) [OBI - 2016]
 Creating Strings II: https://cses.fi/problemset/task/1715/ (Exemplo de binomiais em módulo p + um pouco de char's)
+Swampped Boots: https://neps.academy/exercise/19 (Exemplo de contagem indireta)
+Title: https://neps.academy/exercise/242 (Trabalhando bem com strings)
