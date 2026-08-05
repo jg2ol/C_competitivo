@@ -10,7 +10,7 @@ using namespace std;
 // Cuidado com o valor de maxn
 #define maxn 50050
 int componente[maxn];
-vector <int> vizinhos[maxn]; // vector de vetores-padrão com maxn posições em cada um
+vector <int> vizinhos[maxn]; // vetor-padrão com maxn vector's vazios
 
 // Funcão recursiva que faz os vértices vizinhos (direta e indiretamente) de x serem uma componente só
 void dfs(int x) {

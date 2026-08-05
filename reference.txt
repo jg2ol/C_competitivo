@@ -1,2 +1,2 @@
-link para reference c++
+link p/ reference c++
 https://en.cppreference.com/w/

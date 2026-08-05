@@ -19,3 +19,4 @@ Arco e Flecha: https://neps.academy/br/exercise/6 (Exemplo de Contagem de Invers
 Creating Strings II: https://cses.fi/problemset/task/1715/ (Exemplo de binomiais em módulo p + um pouco de char's)
 Swampped Boots: https://neps.academy/exercise/19 (Exemplo de contagem indireta)
 Title: https://neps.academy/exercise/242 (Trabalhando bem com strings)
+Desvio de Rota: https://neps.academy/br/exercise/296 (Bom p/ praticar variações de dijkstra)
