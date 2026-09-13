@@ -1,0 +1,2 @@
+How to install MinGW-w64 & setup C/C++ in Visual Studio Code on Windows 10/11 [ 2026 Update ] MSYS2
+https://www.youtube.com/watch?v=aDDXHmc82pI
